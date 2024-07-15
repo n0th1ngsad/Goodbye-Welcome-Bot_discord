@@ -19,12 +19,12 @@ class Welcome:
             async with aiohttp.ClientSession() as session:
                 async with session.get(background_url) as resp:
                     if resp.status != 200:
-                        return await channel.send('Tidak dapat mengunduh gambar latar belakang.')
+                        return await channel.send('Unable to download background images.')
                     background_data = await resp.read()
                 
                 async with session.get(pfp_url) as resp:
                     if resp.status != 200:
-                        return await channel.send('Tidak dapat mengunduh gambar profil pengguna.')
+                        return await channel.send('Cant download user profile picture.')
                     pfp_data = await resp.read()
 
             background = Image.open(BytesIO(background_data)).convert("RGBA")
@@ -59,12 +59,10 @@ class Welcome:
 
             embed = Embed(
                 title="Welcome 😁",
-                description=f"**{member.mention} telah bergabung ke server.**",
+                description=f"**{member.mention} has joined the server.**",
                 color=0x8854d0 
             )
             embed.set_image(url="attachment://welcome_image.png")
-            embed.set_footer(text="©secret basement team - 2024", icon_url=self.client.user.avatar.url)
-
             await channel.send(embed=embed, file=file)
 
 def setup(client):
