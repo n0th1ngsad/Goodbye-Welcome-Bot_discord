@@ -9,10 +9,8 @@ Simple discord code bot in python with feature, when there is a member out the b
 3. run discord bot
 4. just wait some member or user join your server
 ```
-> Before </br>
-![image img](/example1.png) </br>
+> Example </br>
+![image img](/example.png) </br>
 
-> After </br>
-![image img](/example2.png) </br>
 
 # DON'T FORGET TO STAR THIS REPOS :)
