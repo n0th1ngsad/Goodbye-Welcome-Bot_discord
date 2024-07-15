@@ -10,9 +10,9 @@ class Welcome:
         self.client.event(self.on_member_join)
 
     async def on_member_join(self, member):
-        channel = self.client.get_channel(1233042384787345479)
+        channel = self.client.get_channel(YOUR_CHANNEL_ID)
         if channel is not None:
-            background_url = 'https://autumn.revolt.chat/attachments/TCHnUYhrt5xXKUQeaxWX-vqA2Ct9yvH03B_IyF56-H' 
+            background_url = 'YOUR_CUSTOM_URL' 
 
             pfp_url = str(member.avatar.url)
 
